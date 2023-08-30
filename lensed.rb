@@ -5,20 +5,20 @@
 class Lensed < Formula
   desc ""
   homepage "https://github.com/kubecfg/lensed"
-  version "0.0.4"
+  version "0.0.5"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/kubecfg/lensed/releases/download/v0.0.4/lensed_0.0.4_darwin_arm64.tar.gz"
-      sha256 "05e98872cbaf0943bf75bd629819f8bf71b83dee006f11812d9265a71bdf7b51"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubecfg/lensed/releases/download/v0.0.5/lensed_0.0.5_darwin_amd64.tar.gz"
+      sha256 "28850c339dc199d45033f110706562a1f5b200a39d305d103b3701824b85040d"
 
       def install
         bin.install "lensed"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kubecfg/lensed/releases/download/v0.0.4/lensed_0.0.4_darwin_amd64.tar.gz"
-      sha256 "af48f636f163702e75373ee80c813d1d224ef82ee73541338de42f42df72f215"
+    if Hardware::CPU.arm?
+      url "https://github.com/kubecfg/lensed/releases/download/v0.0.5/lensed_0.0.5_darwin_arm64.tar.gz"
+      sha256 "6d81a6e04a5107aae2c15a6f9484708631258429fc4afde2f56df326dc77809e"
 
       def install
         bin.install "lensed"
@@ -27,17 +27,17 @@ class Lensed < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubecfg/lensed/releases/download/v0.0.4/lensed_0.0.4_linux_arm64.tar.gz"
-      sha256 "8ea3548052832c19cff75b7c5f9eaede5309bf45d614ab992153c6766ab6d2da"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubecfg/lensed/releases/download/v0.0.5/lensed_0.0.5_linux_amd64.tar.gz"
+      sha256 "f499d05df7e09c3f4557a153733ef90f2923307075fe4a518b6fd498a7e1c05d"
 
       def install
         bin.install "lensed"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kubecfg/lensed/releases/download/v0.0.4/lensed_0.0.4_linux_amd64.tar.gz"
-      sha256 "73d5bbf5374e373a2073d6b825638a85ff2c276aaa4b519ad82f05f23f91848b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kubecfg/lensed/releases/download/v0.0.5/lensed_0.0.5_linux_arm64.tar.gz"
+      sha256 "85f6145545cc2a4d7a0686420e5dd6e2898e505190dc6720540c601e2e6b7ef0"
 
       def install
         bin.install "lensed"
