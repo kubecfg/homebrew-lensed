@@ -5,20 +5,20 @@
 class Lensed < Formula
   desc ""
   homepage "https://github.com/kubecfg/lensed"
-  version "0.0.6"
+  version "0.0.7"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/kubecfg/lensed/releases/download/v0.0.6/lensed_0.0.6_darwin_arm64.tar.gz"
-      sha256 "e669d254c7e57dd44d4ce85f403b6fbb3dc7697daaf635eef460cd156112c340"
+      url "https://github.com/kubecfg/lensed/releases/download/v0.0.7/lensed_0.0.7_darwin_arm64.tar.gz"
+      sha256 "f9fb3bd6d442666ac1d71de0fdc056666a6d5d742453ef1778633deb2b36dced"
 
       def install
         bin.install "lensed"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kubecfg/lensed/releases/download/v0.0.6/lensed_0.0.6_darwin_amd64.tar.gz"
-      sha256 "dbe2ea52ae36109a59a56acd831e6276890a7ce20fd83e3bcba0e3b89f936ff8"
+      url "https://github.com/kubecfg/lensed/releases/download/v0.0.7/lensed_0.0.7_darwin_amd64.tar.gz"
+      sha256 "f5d81a2c08597b8f2fe0ab64e0a7ef4c399a892e60728c3b17e00daddbdb660a"
 
       def install
         bin.install "lensed"
@@ -28,16 +28,16 @@ class Lensed < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/kubecfg/lensed/releases/download/v0.0.6/lensed_0.0.6_linux_amd64.tar.gz"
-      sha256 "5284596addb296422923f84bf3a549daeabb3ae498d6a8fc6a178783936981c8"
+      url "https://github.com/kubecfg/lensed/releases/download/v0.0.7/lensed_0.0.7_linux_amd64.tar.gz"
+      sha256 "ee0003ff2c29bc4f0785746d2c90197db0b667f45280aefe5392067007788300"
 
       def install
         bin.install "lensed"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubecfg/lensed/releases/download/v0.0.6/lensed_0.0.6_linux_arm64.tar.gz"
-      sha256 "3bc8238039828115409cf494550f9ab486f90f405b3081208db8e7756718d6f6"
+      url "https://github.com/kubecfg/lensed/releases/download/v0.0.7/lensed_0.0.7_linux_arm64.tar.gz"
+      sha256 "c65360debfb7be6c49f821963f151fd649f1cc67beef2d605e2e57f3e76b08ff"
 
       def install
         bin.install "lensed"
