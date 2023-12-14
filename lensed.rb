@@ -5,20 +5,20 @@
 class Lensed < Formula
   desc ""
   homepage "https://github.com/kubecfg/lensed"
-  version "0.0.7"
+  version "0.0.8"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/kubecfg/lensed/releases/download/v0.0.7/lensed_0.0.7_darwin_arm64.tar.gz"
-      sha256 "f9fb3bd6d442666ac1d71de0fdc056666a6d5d742453ef1778633deb2b36dced"
+      url "https://github.com/kubecfg/lensed/releases/download/v0.0.8/lensed_0.0.8_darwin_arm64.tar.gz"
+      sha256 "1f27b0aa5d31413d5e3fef4337404c6c3529ff2ffcdd1b0f9b70f3b46441f2c5"
 
       def install
         bin.install "lensed"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kubecfg/lensed/releases/download/v0.0.7/lensed_0.0.7_darwin_amd64.tar.gz"
-      sha256 "f5d81a2c08597b8f2fe0ab64e0a7ef4c399a892e60728c3b17e00daddbdb660a"
+      url "https://github.com/kubecfg/lensed/releases/download/v0.0.8/lensed_0.0.8_darwin_amd64.tar.gz"
+      sha256 "cc98123e076cb5d6b5dd258faef6364e2f1b9ce00fa2fcea1919589216c2f5c0"
 
       def install
         bin.install "lensed"
@@ -27,17 +27,17 @@ class Lensed < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/kubecfg/lensed/releases/download/v0.0.7/lensed_0.0.7_linux_amd64.tar.gz"
-      sha256 "ee0003ff2c29bc4f0785746d2c90197db0b667f45280aefe5392067007788300"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kubecfg/lensed/releases/download/v0.0.8/lensed_0.0.8_linux_arm64.tar.gz"
+      sha256 "695c8f0292649a3405acd70b37425dddb89f7bb3a271f27b258296b50acc057a"
 
       def install
         bin.install "lensed"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubecfg/lensed/releases/download/v0.0.7/lensed_0.0.7_linux_arm64.tar.gz"
-      sha256 "c65360debfb7be6c49f821963f151fd649f1cc67beef2d605e2e57f3e76b08ff"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubecfg/lensed/releases/download/v0.0.8/lensed_0.0.8_linux_amd64.tar.gz"
+      sha256 "df2dd2b256c917d2baf9a6430bd91c4d3aaccead7c6e9d6c0a0fd6720ec84969"
 
       def install
         bin.install "lensed"
